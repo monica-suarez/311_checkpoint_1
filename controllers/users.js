@@ -12,7 +12,7 @@ const showOne = (req, res) =>{
         return res.json(filteredId);
     }
     else{
-        return res.status(404).json({ msg: `User id number does not exist` })
+        return res.status(400).json({ msg: `User id number does not exist` })
     }
   
 };
@@ -43,7 +43,7 @@ const updateOneUser = (req, res) =>{
         })
       }
       else{
-        res.status(404).json({ msg: `User id number does not exist` })
+        res.status(400).json({ msg: `User id number does not exist` })
     }
 };
 
@@ -55,7 +55,7 @@ const deleteOneUser = (req, res) =>{
         res.send({ msg: `User has been deleted` })
     }
     else{
-        res.status(404).json({ msg: `User id number does not exist` }) 
+        res.status(400).json({ msg: `User id number does not exist` }) 
     }
 };
 
